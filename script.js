@@ -3,10 +3,12 @@ function flatten(array) {
   if (Array.isArray(array)) {
     array.map((a) => {
       if (Array.isArray(a)) {
-        newArr = newArr.concat(flatten(a));
+        // newArr = newArr.concat(flatten(a));
         // const values = a.values();
-        // // console.log(values.next().value);
         // newArr.push(values.next().value);
+        a.forEach((b) => {
+          newArr.push(b);
+        });
       } else {
         newArr.push(a);
       }
